@@ -80,7 +80,7 @@ class ShowcaseController extends ControllerBase {
 
     $data = [];
 
-    $key = $this->requestStack->query->get('featured');
+    $key = \Drupal::request()->query->get('featured');
 
     $query = $this->entityTypeManager()->getStorage('node')->getQuery();
     if ($key == 1) {
@@ -104,7 +104,9 @@ class ShowcaseController extends ControllerBase {
 
     /** @var \Drupal\node\Entity\Node $node */
     foreach ($nodes as $node) {
+
       $fid = $node->get('field_featured_image')->entity->id();
+
       $linked_article_id = $node->get('field_referenced_article')
         ->getValue()[0]['target_id'];
       if ($linked_article_id) {
