@@ -1,0 +1,14 @@
+public_api.get_showcase:
+  path: 'public-api/showcase/{showcase}'
+  defaults: { _controller: '\Drupal\showcase\Controller\ShowcaseController::getShowcase' }
+  methods: [ GET ]
+  requirements:
+    _access: 'TRUE'
+
+public_api.get_showcases:
+  path: 'public-api/showcases'
+  defaults: { _controller: '\Drupal\showcase\Controller\ShowcaseController::getShowcases' }
+  methods: [ GET ]
+  requirements:
+    _access: 'TRUE'
+

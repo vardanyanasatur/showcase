@@ -1,0 +1,6 @@
+name: Showcase
+type: module
+description: 'Enable custom showcase content type and provice public API.'
+package: Custom
+
+core: 8.x

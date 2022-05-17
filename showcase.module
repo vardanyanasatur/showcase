@@ -1,0 +1,5 @@
+<?php
+
+function showcase_query_random_alter( $query) {
+  $query->orderRandom();
+}
